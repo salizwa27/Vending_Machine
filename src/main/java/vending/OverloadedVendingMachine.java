@@ -42,6 +42,37 @@ public class OverloadedVendingMachine {
 
     void buy(Product product){
 
+        softDrinkQty = softDrinkQty -- ;
+        saltySnacksQty = saltySnacksQty -- ;
+        chocolatesQty = chocolatesQty -- ;
+    }
+
+    void addStock(SoftDrink softdrink){
+
+        if (softdrink == null){
+            softDrinkQty ++ ;
+        }
+    }
+
+    void addStock(SaltySnack saltySnack){
+
+        if (saltySnack == null){
+            saltySnacksQty ++ ;
+        }
+    }
+
+    void addStock(Chocolate chocolate){
+        if (chocolate == null){
+            chocolatesQty ++ ;
+        }
+    }
+
+    void addStock(Product product){
+
+        softDrinkQty = softDrinkQty ++ ;
+        saltySnacksQty = saltySnacksQty ++ ;
+        chocolatesQty = chocolatesQty ++ ;
+
     }
 
 }
