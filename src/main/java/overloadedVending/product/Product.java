@@ -1,4 +1,4 @@
-package vending.product;
+package overloadedVending.product;
 
 public class Product {
 

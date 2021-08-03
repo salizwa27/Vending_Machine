@@ -1,6 +1,6 @@
-package vending;
+package overloadedVending;
 
-import vending.product.*;
+import overloadedVending.product.*;
 
 public class OverloadedVendingMachine {
 
@@ -49,20 +49,20 @@ public class OverloadedVendingMachine {
 
     void addStock(SoftDrink softdrink){
 
-        if (softdrink == null){
+        if (softdrink != null){
             softDrinkQty ++ ;
         }
     }
 
     void addStock(SaltySnack saltySnack){
 
-        if (saltySnack == null){
+        if (saltySnack != null){
             saltySnacksQty ++ ;
         }
     }
 
     void addStock(Chocolate chocolate){
-        if (chocolate == null){
+        if (chocolate != null){
             chocolatesQty ++ ;
         }
     }
@@ -73,6 +73,22 @@ public class OverloadedVendingMachine {
         saltySnacksQty = saltySnacksQty ++ ;
         chocolatesQty = chocolatesQty ++ ;
 
+    }
+
+    int getStock(SoftDrink softdrink){
+        return softDrinkQty;
+    }
+
+    int getStock(SaltySnack saltySnack){
+        return saltySnacksQty;
+    }
+
+    int getStock(Chocolate chocolate){
+        return chocolatesQty;
+    }
+
+    int getStock(){
+        return softDrinkQty + saltySnacksQty + chocolatesQty;
     }
 
 }
